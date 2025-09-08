@@ -1,0 +1,77 @@
+{
+  "restaurant": {
+    "name": "Giuseppe's Italian Kitchen",
+    "phone": "(555) 987-6543",
+    "address": "456 Little Italy Street, Food District, NY 10001"
+  },
+  "menu": {
+    "appetizers": [
+      {
+        "name": "Bruschetta",
+        "price": 8.95,
+        "description": "Toasted bread with fresh tomatoes, basil, and garlic",
+        "vegetarian": "true"
+      },
+      {
+        "name": "Calamari Fritti",
+        "price": 12.95,
+        "description": "Crispy fried squid rings with marinara sauce",
+        "vegetarian": "false"
+      }
+    ],
+    "pasta": [
+      {
+        "name": "Spaghetti Carbonara",
+        "price": 16.95,
+        "description": "Classic Roman pasta with eggs, pecorino cheese, and pancetta",
+        "vegetarian": "false"
+      },
+      {
+        "name": "Penne Arrabbiata",
+        "price": 14.95,
+        "description": "Penne pasta in spicy tomato sauce with garlic and red peppers",
+        "vegetarian": "true",
+        "spicy": "true"
+      },
+      {
+        "name": "Fettuccine Alfredo",
+        "price": 15.95,
+        "description": "Fresh fettuccine in creamy parmesan sauce",
+        "vegetarian": "true"
+      }
+    ],
+    "pizza": [
+      {
+        "name": "Margherita",
+        "price": 18.95,
+        "description": "Fresh mozzarella, tomato sauce, and basil",
+        "vegetarian": "true"
+      },
+      {
+        "name": "Pepperoni Supreme",
+        "price": 21.95,
+        "description": "Pepperoni, mozzarella, mushrooms, and bell peppers",
+        "vegetarian": "false"
+      }
+    ],
+    "desserts": [
+      {
+        "name": "Tiramisu",
+        "price": 7.95,
+        "description": "Classic Italian dessert with coffee-soaked ladyfingers",
+        "vegetarian": "true"
+      },
+      {
+        "name": "Gelato",
+        "price": 5.95,
+        "description": "Italian ice cream - vanilla, chocolate, or strawberry",
+        "vegetarian": "true"
+      }
+    ]
+  },
+  "hours": {
+    "monday_thursday": "11:30 AM - 9:30 PM",
+    "friday_saturday": "11:30 AM - 10:30 PM",
+    "sunday": "12:00 PM - 9:00 PM"
+  }
+}
