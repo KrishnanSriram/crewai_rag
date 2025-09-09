@@ -97,11 +97,26 @@ class CrewAIRAGSystem:
 
     def setup_rag_tool(self):
         """Initialize RagTool with the vector database"""
+        rag_config = {
+            "llm": {
+                "provider": "ollama",
+                "config": {
+                    "model": "mistral:7b"
+                }
+            },
+            "embedder": {
+                "provider": "ollama",
+                "config": {
+                    "model": "nomic-embed-text"
+                }
+            }
+        }
         if os.path.exists(self.vector_db_path):
             self.rag_tool = RagTool(
                 name="Knowledge Base Search",
                 description="Search through the knowledge base of PDF and JSON documents to find relevant information",
                 vectorstore_path=self.vector_db_path,
+                config=rag_config,
             )
         else:
             print(f"Vector database not found at {self.vector_db_path}. Please create it first.")
@@ -232,9 +247,6 @@ def setup_rag_system(pdf_files: List[str], json_files: List[str], vector_db_path
 
 # Example usage
 if __name__ == "__main__":
-    # Set your OpenAI API key
-    # os.environ["OPENAI_API_KEY"] = "your-openai-api-key"
-
     # Define your file paths
     pdf_files = [
         "./knowledge/rd-gsg.pdf",
@@ -249,7 +261,7 @@ if __name__ == "__main__":
 
     # Example queries
     queries = [
-        "Do you carry any pasta items? If you do, what are they?"
+        "What are the appetizers you carry? Can you share them with cost?"
     ]
 
     # Process queries
